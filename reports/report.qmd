@@ -2,7 +2,7 @@
 title: Homework 8 - World Bank Analysis
 ---
 
-GITHUB URL:  <https://github.com/cmsc-vcu/cmsc408-sp2025-hw8-jleonard99>
+GITHUB URL:  <https://github.com/cmsc-vcu/cmsc408-sp2025-hw8-Ghavdarov.git>
 
 
 # Problem Background
@@ -73,7 +73,7 @@ select
   *
 from 
   world_bank_data.wdi_country
-limit 5
+limit 10
 """)
 
 ```
@@ -91,7 +91,9 @@ List all non-countries.
 ## (skills: select, where)
 
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT *
+FROM world_bank_data.wdi_country
+WHERE Region IS NULL OR TRIM(Region) = '';
 """)
 ```
 
@@ -109,20 +111,26 @@ Create your own copy of WDI_Country containing just countries.
 
 # drop table
 execute_ddl(cnx,"""
-drop table if exists wdi_country;
+drop table if exists sp25_chavdarovig_user.wdi_countries;
 """)
 ```
 
 ```{python}
 # create table
 execute_ddl(cnx,"""
+CREATE TABLE sp25_chavdarovig_user.wdi_countries AS
+SELECT *
+FROM world_bank_data.wdi_country
+WHERE Region IS NOT NULL AND TRIM(Region) != '';
 """)
 ```
 
 ```{python}
 # show number of records
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT COUNT(*) AS total_records
+FROM sp25_chavdarovig_user.wdi_countries;
+
 """)
 ```
 
@@ -134,7 +142,12 @@ According to the World Bank, in 2020 there were how many countries in the world?
 ## (skills: select, aggregate)
 
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT COUNT(DISTINCT d.`Country Code`) AS countries_with_data_2020
+FROM world_bank_data.wdi_data d
+JOIN sp25_chavdarovig_user.wdi_countries c
+  ON d.`Country Code` = c.`Country Code`
+WHERE d.`2020` IS NOT NULL;
+
 """)
 
 ```
@@ -151,7 +164,10 @@ What are all unique values of region in the wdi_country table?
 ## (skills: select, aggregate, order by)
 
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT DISTINCT Region
+FROM world_bank_data.wdi_country
+ORDER BY Region;
+
 """)
 
 ```
@@ -165,7 +181,12 @@ How many countries are in each region?
 ## (skills: select, aggregate, group by, order by)
 
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT Region, COUNT(*) AS country_count
+FROM world_bank_data.wdi_country
+WHERE Region IS NOT NULL AND TRIM(Region) != ''
+GROUP BY Region
+ORDER BY country_count DESC;
+
 """)
 
 ```
@@ -179,7 +200,11 @@ List the country full names and regions for all countries in north america.
 ## (skills: select, where, order by)
 
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT `Long Name`, Region
+FROM world_bank_data.wdi_country
+WHERE Region = 'North America'
+ORDER BY `Long Name`;
+
 """)
 
 ```
@@ -192,7 +217,10 @@ select "doh!" as "Homer says ..." from dual
 ## (skills: select, where)
 
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT Region, `Short Name`, `Long Name`
+FROM world_bank_data.wdi_country
+WHERE `Short Name` = 'Qatar';
+
 """)
 
 ```
