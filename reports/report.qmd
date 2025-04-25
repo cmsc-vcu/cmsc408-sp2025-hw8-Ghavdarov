@@ -218,7 +218,7 @@ ORDER BY `Long Name`;
 
 run_sql_and_return_html(cnx,"""
 SELECT Region, `Short Name`, `Long Name`
-FROM world_bank_data.wdi_country
+FROM sp25_chavdarovig_user.wdi_countries
 WHERE `Short Name` = 'Qatar';
 
 """)
@@ -234,7 +234,19 @@ WHERE `Short Name` = 'Qatar';
 ## (skills: select, where, order by)
 
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT 
+    `Country Code`, 
+    `Short Name`, 
+    `2-alpha code` AS abbr, 
+    `WB-2 code` AS wb_abbr, 
+    Region
+FROM sp25_chavdarovig_user.wdi_countries
+WHERE `2-alpha code` IS NOT NULL 
+  AND `WB-2 code` IS NOT NULL
+  AND `2-alpha code` != `WB-2 code`
+ORDER BY `Short Name`;
+
+
 """)
 
 ```
@@ -248,7 +260,12 @@ select "doh!" as "Homer says ..." from dual
 ## (skills: select, aggregate, group by, order by)
 
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT `Income Group`, COUNT(*) AS country_count
+FROM sp25_chavdarovig_user.wdi_countries
+GROUP BY `Income Group`
+ORDER BY country_count DESC;
+
+
 """)
 
 ```
@@ -263,7 +280,16 @@ select "doh!" as "Homer says ..." from dual
 ## in the first column.
 
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT 
+    `Short Name`, 
+    `Country Code`, 
+    Region, 
+    `Income Group`
+FROM sp25_chavdarovig_user.wdi_countries
+WHERE `Income Group` IS NULL 
+   OR TRIM(`Income Group`) = '';
+
+
 """)
 
 ```
@@ -277,7 +303,12 @@ select "doh!" as "Homer says ..." from dual
 ## NOTE - if you get this wrong, all subsequent tables will be wrong!
 
 execute_ddl(cnx,"""
+UPDATE sp25_chavdarovig_user.wdi_countries
+SET `Income Group` = 'High income'
+WHERE `Short Name` = 'Venezuela';
+COMMIT;
 """)
+
 
 
 ```
@@ -285,7 +316,10 @@ execute_ddl(cnx,"""
 ## Now, display the country again to verify the change stuck!
 
 run_sql_and_return_html(cnx,"""
-select "doh!" as "Homer says ..." from dual
+SELECT *
+FROM sp25_chavdarovig_user.wdi_countries
+WHERE `Short Name` = 'Venezuela';
+
 """)
 
 ```
