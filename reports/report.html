@@ -3134,7 +3134,7 @@ vertical-align: -.125em;
 <p>GITHUB URL: <a href="https://github.com/cmsc-vcu/cmsc408-sp2025-hw8-Ghavdarov.git" class="uri">https://github.com/cmsc-vcu/cmsc408-sp2025-hw8-Ghavdarov.git</a></p>
 <section id="problem-background" class="level1">
 <h1>Problem Background</h1>
-<div id="1174b178" class="cell" data-execution_count="1">
+<div id="95cb3370" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> helpers <span class="im">import</span> create_database_engine, run_sql_and_return_df, run_sql_and_return_html, create_db_wrapper, execute_ddl_from_file, execute_ddl</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load these variables from .env file.</span></span>
@@ -3147,7 +3147,7 @@ vertical-align: -.125em;
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>cnx,config <span class="op">=</span> create_db_wrapper( config_map )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="70b5e7b2" class="cell" data-execution_count="2">
+<div id="af54aa3f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Do a quick test of the connection and trap the errors better!</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
@@ -3158,7 +3158,7 @@ vertical-align: -.125em;
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="st">where</span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="st">  table_schema in (&#39;world_bank_data&#39;)</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="678">
+<div class="cell-output cell-output-display" data-execution_count="28">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -3248,7 +3248,7 @@ Total Rows: 3, Total Columns: 3
 <section id="task-1" class="level2">
 <h2 class="anchored" data-anchor-id="task-1">Task 1</h2>
 <p>How many records are in the country table?</p>
-<div id="cb8d298a" class="cell" data-execution_count="3">
+<div id="cf2aba94" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># How many records are in the world_bank_data.wdi_country table?</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (skills: select, aggregate)</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3258,7 +3258,7 @@ Total Rows: 3, Total Columns: 3
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="st">from</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="st">  world_bank_data.wdi_country</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="679">
+<div class="cell-output cell-output-display" data-execution_count="29">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -3297,7 +3297,7 @@ Total Rows: 1, Total Columns: 1
 <section id="task-2" class="level2">
 <h2 class="anchored" data-anchor-id="task-2">Task 2</h2>
 <p>Explore the first 5 records in the country table.</p>
-<div id="e718fd84" class="cell" data-execution_count="4">
+<div id="a5cd4096" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">## write out the first 10 records and look at the columns</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">## Do you see any blanks or missing data?</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, limit)</span></span>
@@ -3309,7 +3309,7 @@ Total Rows: 1, Total Columns: 1
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">  world_bank_data.wdi_country</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="st">limit 10</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="680">
+<div class="cell-output cell-output-display" data-execution_count="30">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -4741,7 +4741,7 @@ Total Rows: 10, Total Columns: 31
 <section id="task-3" class="level2">
 <h2 class="anchored" data-anchor-id="task-3">Task 3</h2>
 <p>List all non-countries.</p>
-<div id="9ad2550c" class="cell" data-execution_count="5">
+<div id="f6cc9f91" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">## task 3</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">## Which records are NOT for countries, that is they&#39;re for regions or groups of countries.</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">## How can you tell?</span></span>
@@ -4753,7 +4753,7 @@ Total Rows: 10, Total Columns: 31
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="st">FROM world_bank_data.wdi_country</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="st">WHERE Region IS NULL OR TRIM(Region) = &#39;&#39;;</span></span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="681">
+<div class="cell-output cell-output-display" data-execution_count="31">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -11048,7 +11048,7 @@ Total Rows: 48, Total Columns: 31
 <section id="task-4" class="level2">
 <h2 class="anchored" data-anchor-id="task-4">Task 4</h2>
 <p>Create your own copy of WDI_Country containing just countries.</p>
-<div id="ec5adb1c" class="cell" data-execution_count="6">
+<div id="363530b0" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">## task 4</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">## The WDI table clearly contains information for countries and non-countries</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">## using CREATE TABLE ... SELECT from WHERE syntax.</span></span>
@@ -11061,7 +11061,7 @@ Total Rows: 48, Total Columns: 31
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="st">drop table if exists sp25_chavdarovig_user.wdi_countries;</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="40047d32" class="cell" data-execution_count="7">
+<div id="501fe663" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create table</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>execute_ddl(cnx,<span class="st">&quot;&quot;&quot;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="st">CREATE TABLE sp25_chavdarovig_user.wdi_countries AS</span></span>
@@ -11070,14 +11070,14 @@ Total Rows: 48, Total Columns: 31
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="st">WHERE Region IS NOT NULL AND TRIM(Region) != &#39;&#39;;</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="83735b2e" class="cell" data-execution_count="8">
+<div id="fd92dbd4" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># show number of records</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT COUNT(*) AS total_records</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="st">FROM sp25_chavdarovig_user.wdi_countries;</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="684">
+<div class="cell-output cell-output-display" data-execution_count="34">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -11116,7 +11116,7 @@ Total Rows: 1, Total Columns: 1
 <section id="task-5" class="level2">
 <h2 class="anchored" data-anchor-id="task-5">Task 5</h2>
 <p>According to the World Bank, in 2020 there were how many countries in the world?</p>
-<div id="352fbe37" class="cell" data-execution_count="9">
+<div id="38e189ea" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, aggregate)</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
@@ -11127,7 +11127,7 @@ Total Rows: 1, Total Columns: 1
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="st">WHERE d.`2020` IS NOT NULL;</span></span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="685">
+<div class="cell-output cell-output-display" data-execution_count="35">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -11166,7 +11166,7 @@ Total Rows: 1, Total Columns: 1
 <section id="task-6" class="level2">
 <h2 class="anchored" data-anchor-id="task-6">Task 6</h2>
 <p>What are all unique values of region in the wdi_country table?</p>
-<div id="259daa76" class="cell" data-execution_count="10">
+<div id="0622167d" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Let&#39;s investigate the country_region field.</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">## What is the domain of the country_region field? That is,</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">## what are the unique values found there?</span></span>
@@ -11179,7 +11179,7 @@ Total Rows: 1, Total Columns: 1
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY Region;</span></span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="686">
+<div class="cell-output cell-output-display" data-execution_count="36">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -11274,7 +11274,7 @@ Total Rows: 8, Total Columns: 1
 <section id="task-7" class="level2">
 <h2 class="anchored" data-anchor-id="task-7">Task 7</h2>
 <p>How many countries are in each region?</p>
-<div id="1cab3ce5" class="cell" data-execution_count="11">
+<div id="b5c536f0" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">## How many countries are in each region?</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, aggregate, group by, order by)</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -11286,7 +11286,7 @@ Total Rows: 8, Total Columns: 1
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY country_count DESC;</span></span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="687">
+<div class="cell-output cell-output-display" data-execution_count="37">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -11405,7 +11405,7 @@ Total Rows: 7, Total Columns: 2
 <section id="task-8" class="level2">
 <h2 class="anchored" data-anchor-id="task-8">Task 8</h2>
 <p>List the country full names and regions for all countries in north america.</p>
-<div id="3a402821" class="cell" data-execution_count="12">
+<div id="be7e593b" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">## List the country full names and regions for all countries in north america</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, where, order by)</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -11416,7 +11416,7 @@ Total Rows: 7, Total Columns: 2
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY `Long Name`;</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="688">
+<div class="cell-output cell-output-display" data-execution_count="38">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -11486,7 +11486,7 @@ Total Rows: 3, Total Columns: 2
 </section>
 <section id="task-9" class="level2">
 <h2 class="anchored" data-anchor-id="task-9">Task 9</h2>
-<div id="baadd65a" class="cell" data-execution_count="13">
+<div id="9f4ebdc9" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">## The last World Cup soccer tournament was hosted by Qatar.</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">## What region contains Qatar?  List the region, country short name and full name</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, where)</span></span>
@@ -11497,7 +11497,7 @@ Total Rows: 3, Total Columns: 2
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="st">WHERE `Short Name` = &#39;Qatar&#39;;</span></span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="689">
+<div class="cell-output cell-output-display" data-execution_count="39">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -11551,7 +11551,7 @@ Total Rows: 1, Total Columns: 3
 </section>
 <section id="task-10" class="level2">
 <h2 class="anchored" data-anchor-id="task-10">Task 10</h2>
-<div id="a50ccdad" class="cell" data-execution_count="14">
+<div id="3ec68d2c" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">## There are two abbreviation fields in the data country_abbr and country_wb_abbr.</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co">## List the country code, short name, abbr, wb_abbr and region for all the countries</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">## where the abbr and wb_abbr are different.</span></span>
@@ -11572,7 +11572,7 @@ Total Rows: 1, Total Columns: 3
 <span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="690">
+<div class="cell-output cell-output-display" data-execution_count="40">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -11738,7 +11738,7 @@ Total Rows: 5, Total Columns: 5
 </section>
 <section id="task-11" class="level2">
 <h2 class="anchored" data-anchor-id="task-11">Task 11</h2>
-<div id="cef391ed" class="cell" data-execution_count="15">
+<div id="b2cbfe2c" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Now, let&#39;s investigate the &quot;income category&quot; field.</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">## List the income categories and the number of countries in each</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co">## income category in descending order of most countries to least.</span></span>
@@ -11752,7 +11752,7 @@ Total Rows: 5, Total Columns: 5
 <span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="691">
+<div class="cell-output cell-output-display" data-execution_count="41">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -11846,7 +11846,7 @@ Total Rows: 5, Total Columns: 2
 </section>
 <section id="task-12" class="level2">
 <h2 class="anchored" data-anchor-id="task-12">Task 12</h2>
-<div id="b8a59e6c" class="cell" data-execution_count="16">
+<div id="d1d077ab" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Mystery task.  Looking at the table from Task 11 (anything odd?) write the</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">## next obvious query based on the results in the table.</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">## At a minimum, your query should put country short name in the first column.</span></span>
@@ -11865,7 +11865,7 @@ Total Rows: 5, Total Columns: 2
 <span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="692">
+<div class="cell-output cell-output-display" data-execution_count="42">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -11927,7 +11927,7 @@ Total Rows: 1, Total Columns: 4
 </section>
 <section id="task-13" class="level2">
 <h2 class="anchored" data-anchor-id="task-13">Task 13</h2>
-<div id="23c1f57a" class="cell" data-execution_count="17">
+<div id="63b0717b" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">## OK, this HAS to be an error. Let&#39;s make a assumption that the country </span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co">## in question, because they are oil-rich, are &quot;high income&quot;.  </span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">## Write an update comment to correct the issue.</span></span>
@@ -11940,7 +11940,7 @@ Total Rows: 1, Total Columns: 4
 <span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="st">COMMIT;</span></span>
 <span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="076157f5" class="cell" data-execution_count="18">
+<div id="7c7feb78" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Now, display the country again to verify the change stuck!</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
@@ -11949,7 +11949,7 @@ Total Rows: 1, Total Columns: 4
 <span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="st">WHERE `Short Name` = &#39;Venezuela&#39;;</span></span>
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="694">
+<div class="cell-output cell-output-display" data-execution_count="44">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -12227,16 +12227,23 @@ Total Rows: 1, Total Columns: 31
 </section>
 <section id="task-14" class="level2">
 <h2 class="anchored" data-anchor-id="task-14">Task 14</h2>
-<div id="fc3ba250" class="cell" data-execution_count="19">
+<div id="4b9f2af9" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Write a single query that show the number of countries in each </span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">## &quot;Region&quot;-&quot;Income Group&quot; pair.  The table should have 3 columns:</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">## region, income group, and no.of.countries.</span></span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, aggregate, group by, order by)</span></span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="st">select &quot;doh!&quot; as &quot;Homer says ...&quot; from dual</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="695">
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="st">    Region AS region,</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="st">    `Income Group` AS income_group,</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="st">    COUNT(*) AS `no.of.countries`</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="st">FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY Region, `Income Group`</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY region, `no.of.countries` DESC;</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="45">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -12244,7 +12251,15 @@ Total Rows: 1, Total Columns: 31
 <tr>
 
 <th>
-Homer says …
+region
+</th>
+
+<th>
+income_group
+</th>
+
+<th>
+no.of.countries
 </th>
 
 </tr>
@@ -12256,14 +12271,358 @@ Homer says …
 <tr>
 
 <td>
-doh!
+East Asia &amp; Pacific
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+15
 </td>
 
 </tr>
 
 <tr>
-<td colspan="1" style="text-align: left;">
-Total Rows: 1, Total Columns: 1
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+12
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+9
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Low income
+</td>
+
+<td>
+1
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Europe &amp; Central Asia
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+40
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Europe &amp; Central Asia
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+15
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Europe &amp; Central Asia
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+3
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Latin America &amp; Caribbean
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+19
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Latin America &amp; Caribbean
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+19
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Latin America &amp; Caribbean
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+4
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Middle East &amp; North Africa
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+8
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Middle East &amp; North Africa
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+7
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Middle East &amp; North Africa
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+4
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Middle East &amp; North Africa
+</td>
+
+<td>
+Low income
+</td>
+
+<td>
+2
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+North America
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+3
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+South Asia
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+6
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+South Asia
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+1
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+South Asia
+</td>
+
+<td>
+Low income
+</td>
+
+<td>
+1
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+Low income
+</td>
+
+<td>
+22
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+19
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+6
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+1
+</td>
+
+</tr>
+
+<tr>
+<td colspan="3" style="text-align: left;">
+Total Rows: 22, Total Columns: 3
 </td>
 </tr>
 </tbody>
@@ -12274,7 +12633,7 @@ Total Rows: 1, Total Columns: 1
 </section>
 <section id="task-15" class="level2">
 <h2 class="anchored" data-anchor-id="task-15">Task 15</h2>
-<div id="8a12f3c8" class="cell" data-execution_count="20">
+<div id="517e086f" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Examine the result from task 14. It would be really cool to</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">## present the results of this table in a 2-D form, with </span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co">## columns for each income category (high, upper middle, lower middle, low, other)</span></span>
@@ -12288,9 +12647,24 @@ Total Rows: 1, Total Columns: 1
 <span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, aggregate, group by, nested query)</span></span>
 <span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="st">select &quot;doh!&quot; as &quot;Homer says ...&quot; from dual</span></span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="696">
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="st">    Region AS region,</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(CASE WHEN `Income Group` = &#39;High income&#39; THEN 1 ELSE 0 END) AS high_income,</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(CASE WHEN `Income Group` = &#39;Upper middle income&#39; THEN 1 ELSE 0 END) AS upper_middle_income,</span></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(CASE WHEN `Income Group` = &#39;Lower middle income&#39; THEN 1 ELSE 0 END) AS lower_middle_income,</span></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(CASE WHEN `Income Group` = &#39;Low income&#39; THEN 1 ELSE 0 END) AS low_income,</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="st">    SUM(CASE WHEN `Income Group` IS NULL OR TRIM(`Income Group`) = &#39;&#39; THEN 1 ELSE 0 END) AS other_income,</span></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a><span class="st">    COUNT(*) AS row_total</span></span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a><span class="st">FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY Region</span></span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY Region;</span></span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="46">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -12298,7 +12672,31 @@ Total Rows: 1, Total Columns: 1
 <tr>
 
 <th>
-Homer says …
+region
+</th>
+
+<th>
+high_income
+</th>
+
+<th>
+upper_middle_income
+</th>
+
+<th>
+lower_middle_income
+</th>
+
+<th>
+low_income
+</th>
+
+<th>
+other_income
+</th>
+
+<th>
+row_total
 </th>
 
 </tr>
@@ -12310,14 +12708,230 @@ Homer says …
 <tr>
 
 <td>
-doh!
+East Asia &amp; Pacific
+</td>
+
+<td>
+15.0
+</td>
+
+<td>
+9.0
+</td>
+
+<td>
+12.0
+</td>
+
+<td>
+1.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+37
 </td>
 
 </tr>
 
 <tr>
-<td colspan="1" style="text-align: left;">
-Total Rows: 1, Total Columns: 1
+
+<td>
+Europe &amp; Central Asia
+</td>
+
+<td>
+40.0
+</td>
+
+<td>
+15.0
+</td>
+
+<td>
+3.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+58
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Latin America &amp; Caribbean
+</td>
+
+<td>
+19.0
+</td>
+
+<td>
+19.0
+</td>
+
+<td>
+4.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+42
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Middle East &amp; North Africa
+</td>
+
+<td>
+8.0
+</td>
+
+<td>
+4.0
+</td>
+
+<td>
+7.0
+</td>
+
+<td>
+2.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+21
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+North America
+</td>
+
+<td>
+3.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+3
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+South Asia
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+1.0
+</td>
+
+<td>
+6.0
+</td>
+
+<td>
+1.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+8
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+1.0
+</td>
+
+<td>
+6.0
+</td>
+
+<td>
+19.0
+</td>
+
+<td>
+22.0
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+48
+</td>
+
+</tr>
+
+<tr>
+<td colspan="7" style="text-align: left;">
+Total Rows: 7, Total Columns: 7
 </td>
 </tr>
 </tbody>
@@ -12328,7 +12942,7 @@ Total Rows: 1, Total Columns: 1
 </section>
 <section id="task-16" class="level2">
 <h2 class="anchored" data-anchor-id="task-16">Task 16</h2>
-<div id="22d7c305" class="cell" data-execution_count="21">
+<div id="b2bd2318" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Wow! what a cool table!  It is very interesting to see where the money</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co">## sits around the world.  Using the general approach from Task 14 above</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">## and write a query to return the single region with the most lower-income</span></span>
@@ -12341,9 +12955,18 @@ Total Rows: 1, Total Columns: 1
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, aggregate, group by, nested query, order by, limit)</span></span>
 <span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="st">select &quot;doh!&quot; as &quot;Homer says ...&quot; from dual</span></span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="697">
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="st">    COUNT(*) AS num_low_income_countries,</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="st">    Region,</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="st">    `Income Group`</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="st">FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="st">WHERE `Income Group` = &#39;Low income&#39;</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY Region, `Income Group`</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY num_low_income_countries DESC</span></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="st">LIMIT 1;</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="47">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -12351,7 +12974,15 @@ Total Rows: 1, Total Columns: 1
 <tr>
 
 <th>
-Homer says …
+num_low_income_countries
+</th>
+
+<th>
+Region
+</th>
+
+<th>
+Income Group
 </th>
 
 </tr>
@@ -12363,14 +12994,22 @@ Homer says …
 <tr>
 
 <td>
-doh!
+22
+</td>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+Low income
 </td>
 
 </tr>
 
 <tr>
-<td colspan="1" style="text-align: left;">
-Total Rows: 1, Total Columns: 1
+<td colspan="3" style="text-align: left;">
+Total Rows: 1, Total Columns: 3
 </td>
 </tr>
 </tbody>
@@ -12381,7 +13020,7 @@ Total Rows: 1, Total Columns: 1
 </section>
 <section id="task-17" class="level2">
 <h2 class="anchored" data-anchor-id="task-17">Task 17</h2>
-<div id="3a124ded" class="cell" data-execution_count="22">
+<div id="b672a437" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Are you getting the hand of this? Good! We need to take a look at all</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co">## the countries in the same region and with the same income category as</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">## the Marshall Islands.</span></span>
@@ -12391,9 +13030,26 @@ Total Rows: 1, Total Columns: 1
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, where, subquery)</span></span>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="st">select &quot;doh!&quot; as &quot;Homer says ...&quot; from dual</span></span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="698">
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="st">    `Country Code`, </span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="st">    `Short Name`, </span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="st">    Region, </span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="st">    `Income Group`</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="st">FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="st">WHERE Region = (</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT Region</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE `Country Code` = &#39;MHL&#39;</span></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a><span class="st">AND `Income Group` = (</span></span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT `Income Group`</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE `Country Code` = &#39;MHL&#39;</span></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY `Short Name`;</span></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="48">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -12401,7 +13057,19 @@ Total Rows: 1, Total Columns: 1
 <tr>
 
 <th>
-Homer says …
+Country Code
+</th>
+
+<th>
+Short Name
+</th>
+
+<th>
+Region
+</th>
+
+<th>
+Income Group
 </th>
 
 </tr>
@@ -12413,14 +13081,186 @@ Homer says …
 <tr>
 
 <td>
-doh!
+CHN
+</td>
+
+<td>
+China
+</td>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
 </td>
 
 </tr>
 
 <tr>
-<td colspan="1" style="text-align: left;">
-Total Rows: 1, Total Columns: 1
+
+<td>
+FJI
+</td>
+
+<td>
+Fiji
+</td>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+IDN
+</td>
+
+<td>
+Indonesia
+</td>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+MYS
+</td>
+
+<td>
+Malaysia
+</td>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+MHL
+</td>
+
+<td>
+Marshall Islands
+</td>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+MNG
+</td>
+
+<td>
+Mongolia
+</td>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+THA
+</td>
+
+<td>
+Thailand
+</td>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+TON
+</td>
+
+<td>
+Tonga
+</td>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+TUV
+</td>
+
+<td>
+Tuvalu
+</td>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
+</td>
+
+</tr>
+
+<tr>
+<td colspan="4" style="text-align: left;">
+Total Rows: 9, Total Columns: 4
 </td>
 </tr>
 </tbody>
@@ -12431,7 +13271,7 @@ Total Rows: 1, Total Columns: 1
 </section>
 <section id="task-18" class="level2">
 <h2 class="anchored" data-anchor-id="task-18">Task 18</h2>
-<div id="0e4020c0" class="cell" data-execution_count="23">
+<div id="e8e45988" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">## OK - let&#39;s raise the heat in the kitchen! Review the output from task 14.</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co">## You&#39;ll see that some of the regions do not contain all of the income</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">## levels.  For example, the Europe &amp; Central Asia region does not have</span></span>
@@ -12449,9 +13289,32 @@ Total Rows: 1, Total Columns: 1
 <span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, where, subqueries, joins)</span></span>
 <span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="st">select &quot;doh!&quot; as &quot;Homer says ...&quot; from dual</span></span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="699">
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="st">WITH all_regions AS (</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT DISTINCT Region</span></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE Region IS NOT NULL AND TRIM(Region) != &#39;&#39;</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="st">),</span></span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a><span class="st">all_income_groups AS (</span></span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT DISTINCT `Income Group`</span></span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE `Income Group` IS NOT NULL AND TRIM(`Income Group`) != &#39;&#39;</span></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a><span class="st">),</span></span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a><span class="st">region_income_actual AS (</span></span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT Region, `Income Group`</span></span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a><span class="st">    r.Region,</span></span>
+<span id="cb23-35"><a href="#cb23-35" aria-hidden="true" tabindex="-1"></a><span class="st">    i.`Income Group`</span></span>
+<span id="cb23-36"><a href="#cb23-36" aria-hidden="true" tabindex="-1"></a><span class="st">FROM all_regions r</span></span>
+<span id="cb23-37"><a href="#cb23-37" aria-hidden="true" tabindex="-1"></a><span class="st">CROSS JOIN all_income_groups i</span></span>
+<span id="cb23-38"><a href="#cb23-38" aria-hidden="true" tabindex="-1"></a><span class="st">LEFT JOIN region_income_actual a</span></span>
+<span id="cb23-39"><a href="#cb23-39" aria-hidden="true" tabindex="-1"></a><span class="st">  ON r.Region = a.Region AND i.`Income Group` = a.`Income Group`</span></span>
+<span id="cb23-40"><a href="#cb23-40" aria-hidden="true" tabindex="-1"></a><span class="st">WHERE a.Region IS NULL</span></span>
+<span id="cb23-41"><a href="#cb23-41" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY r.Region, i.`Income Group`;</span></span>
+<span id="cb23-42"><a href="#cb23-42" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="49">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -12459,7 +13322,11 @@ Total Rows: 1, Total Columns: 1
 <tr>
 
 <th>
-Homer says …
+Region
+</th>
+
+<th>
+Income Group
 </th>
 
 </tr>
@@ -12471,14 +13338,78 @@ Homer says …
 <tr>
 
 <td>
-doh!
+Europe &amp; Central Asia
+</td>
+
+<td>
+Low income
 </td>
 
 </tr>
 
 <tr>
-<td colspan="1" style="text-align: left;">
-Total Rows: 1, Total Columns: 1
+
+<td>
+Latin America &amp; Caribbean
+</td>
+
+<td>
+Low income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+North America
+</td>
+
+<td>
+Low income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+North America
+</td>
+
+<td>
+Lower middle income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+North America
+</td>
+
+<td>
+Upper middle income
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+South Asia
+</td>
+
+<td>
+High income
+</td>
+
+</tr>
+
+<tr>
+<td colspan="2" style="text-align: left;">
+Total Rows: 6, Total Columns: 2
 </td>
 </tr>
 </tbody>
@@ -12489,7 +13420,7 @@ Total Rows: 1, Total Columns: 1
 </section>
 <section id="task-19" class="level2">
 <h2 class="anchored" data-anchor-id="task-19">Task 19</h2>
-<div id="e688b695" class="cell" data-execution_count="24">
+<div id="1d769735" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">## Hot enough, yet?  Let&#39;s go for ghost-pepper HOT!  Now let&#39;s build some</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co">## percentage tables.  For example, across the entire sample, what</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co">## is the percentage of total countries in each income category?</span></span>
@@ -12506,9 +13437,50 @@ Total Rows: 1, Total Columns: 1
 <span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="co">## (skills: select, where, subqueries, joins, aggregate functions)</span></span>
 <span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="st">select &quot;doh!&quot; as &quot;Homer says ...&quot; from dual</span></span>
-<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="700">
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="st">WITH base_counts AS (</span></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a><span class="st">        Region,</span></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a><span class="st">        `Income Group`,</span></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a><span class="st">        COUNT(*) AS country_count</span></span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a><span class="st">    GROUP BY Region, `Income Group`</span></span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a><span class="st">),</span></span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a><span class="st">region_totals AS (</span></span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a><span class="st">        Region,</span></span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a><span class="st">        COUNT(*) AS region_total</span></span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a><span class="st">    GROUP BY Region</span></span>
+<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a><span class="st">),</span></span>
+<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a><span class="st">income_totals AS (</span></span>
+<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
+<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a><span class="st">        `Income Group`,</span></span>
+<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a><span class="st">        COUNT(*) AS income_total</span></span>
+<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a><span class="st">    GROUP BY `Income Group`</span></span>
+<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a><span class="st">),</span></span>
+<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a><span class="st">grand_total AS (</span></span>
+<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
+<span id="cb24-41"><a href="#cb24-41" aria-hidden="true" tabindex="-1"></a><span class="st">        COUNT(*) AS total_countries</span></span>
+<span id="cb24-42"><a href="#cb24-42" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb24-43"><a href="#cb24-43" aria-hidden="true" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb24-44"><a href="#cb24-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-45"><a href="#cb24-45" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb24-46"><a href="#cb24-46" aria-hidden="true" tabindex="-1"></a><span class="st">    b.Region,</span></span>
+<span id="cb24-47"><a href="#cb24-47" aria-hidden="true" tabindex="-1"></a><span class="st">    b.`Income Group`,</span></span>
+<span id="cb24-48"><a href="#cb24-48" aria-hidden="true" tabindex="-1"></a><span class="st">    b.country_count,</span></span>
+<span id="cb24-49"><a href="#cb24-49" aria-hidden="true" tabindex="-1"></a><span class="st">    r.region_total,</span></span>
+<span id="cb24-50"><a href="#cb24-50" aria-hidden="true" tabindex="-1"></a><span class="st">    i.income_total,</span></span>
+<span id="cb24-51"><a href="#cb24-51" aria-hidden="true" tabindex="-1"></a><span class="st">    g.total_countries,</span></span>
+<span id="cb24-52"><a href="#cb24-52" aria-hidden="true" tabindex="-1"></a><span class="st">    ROUND((b.country_count * 100.0) / g.total_countries, 2) AS percent_of_total</span></span>
+<span id="cb24-53"><a href="#cb24-53" aria-hidden="true" tabindex="-1"></a><span class="st">FROM base_counts b</span></span>
+<span id="cb24-54"><a href="#cb24-54" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN region_totals r ON b.Region = r.Region</span></span>
+<span id="cb24-55"><a href="#cb24-55" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN income_totals i ON b.`Income Group` = i.`Income Group`</span></span>
+<span id="cb24-56"><a href="#cb24-56" aria-hidden="true" tabindex="-1"></a><span class="st">JOIN grand_total g</span></span>
+<span id="cb24-57"><a href="#cb24-57" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY b.Region, b.`Income Group`;</span></span>
+<span id="cb24-58"><a href="#cb24-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-59"><a href="#cb24-59" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="50">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -12516,7 +13488,31 @@ Total Rows: 1, Total Columns: 1
 <tr>
 
 <th>
-Homer says …
+Region
+</th>
+
+<th>
+Income Group
+</th>
+
+<th>
+country_count
+</th>
+
+<th>
+region_total
+</th>
+
+<th>
+income_total
+</th>
+
+<th>
+total_countries
+</th>
+
+<th>
+percent_of_total
 </th>
 
 </tr>
@@ -12528,14 +13524,710 @@ Homer says …
 <tr>
 
 <td>
-doh!
+East Asia &amp; Pacific
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+15
+</td>
+
+<td>
+37
+</td>
+
+<td>
+86
+</td>
+
+<td>
+217
+</td>
+
+<td>
+6.91
 </td>
 
 </tr>
 
 <tr>
-<td colspan="1" style="text-align: left;">
-Total Rows: 1, Total Columns: 1
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Low income
+</td>
+
+<td>
+1
+</td>
+
+<td>
+37
+</td>
+
+<td>
+26
+</td>
+
+<td>
+217
+</td>
+
+<td>
+0.46
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+12
+</td>
+
+<td>
+37
+</td>
+
+<td>
+51
+</td>
+
+<td>
+217
+</td>
+
+<td>
+5.53
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+East Asia &amp; Pacific
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+9
+</td>
+
+<td>
+37
+</td>
+
+<td>
+54
+</td>
+
+<td>
+217
+</td>
+
+<td>
+4.15
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Europe &amp; Central Asia
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+40
+</td>
+
+<td>
+58
+</td>
+
+<td>
+86
+</td>
+
+<td>
+217
+</td>
+
+<td>
+18.43
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Europe &amp; Central Asia
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+3
+</td>
+
+<td>
+58
+</td>
+
+<td>
+51
+</td>
+
+<td>
+217
+</td>
+
+<td>
+1.38
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Europe &amp; Central Asia
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+15
+</td>
+
+<td>
+58
+</td>
+
+<td>
+54
+</td>
+
+<td>
+217
+</td>
+
+<td>
+6.91
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Latin America &amp; Caribbean
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+19
+</td>
+
+<td>
+42
+</td>
+
+<td>
+86
+</td>
+
+<td>
+217
+</td>
+
+<td>
+8.76
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Latin America &amp; Caribbean
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+4
+</td>
+
+<td>
+42
+</td>
+
+<td>
+51
+</td>
+
+<td>
+217
+</td>
+
+<td>
+1.84
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Latin America &amp; Caribbean
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+19
+</td>
+
+<td>
+42
+</td>
+
+<td>
+54
+</td>
+
+<td>
+217
+</td>
+
+<td>
+8.76
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Middle East &amp; North Africa
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+8
+</td>
+
+<td>
+21
+</td>
+
+<td>
+86
+</td>
+
+<td>
+217
+</td>
+
+<td>
+3.69
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Middle East &amp; North Africa
+</td>
+
+<td>
+Low income
+</td>
+
+<td>
+2
+</td>
+
+<td>
+21
+</td>
+
+<td>
+26
+</td>
+
+<td>
+217
+</td>
+
+<td>
+0.92
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Middle East &amp; North Africa
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+7
+</td>
+
+<td>
+21
+</td>
+
+<td>
+51
+</td>
+
+<td>
+217
+</td>
+
+<td>
+3.23
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Middle East &amp; North Africa
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+4
+</td>
+
+<td>
+21
+</td>
+
+<td>
+54
+</td>
+
+<td>
+217
+</td>
+
+<td>
+1.84
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+North America
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+3
+</td>
+
+<td>
+3
+</td>
+
+<td>
+86
+</td>
+
+<td>
+217
+</td>
+
+<td>
+1.38
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+South Asia
+</td>
+
+<td>
+Low income
+</td>
+
+<td>
+1
+</td>
+
+<td>
+8
+</td>
+
+<td>
+26
+</td>
+
+<td>
+217
+</td>
+
+<td>
+0.46
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+South Asia
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+6
+</td>
+
+<td>
+8
+</td>
+
+<td>
+51
+</td>
+
+<td>
+217
+</td>
+
+<td>
+2.76
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+South Asia
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+1
+</td>
+
+<td>
+8
+</td>
+
+<td>
+54
+</td>
+
+<td>
+217
+</td>
+
+<td>
+0.46
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+High income
+</td>
+
+<td>
+1
+</td>
+
+<td>
+48
+</td>
+
+<td>
+86
+</td>
+
+<td>
+217
+</td>
+
+<td>
+0.46
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+Low income
+</td>
+
+<td>
+22
+</td>
+
+<td>
+48
+</td>
+
+<td>
+26
+</td>
+
+<td>
+217
+</td>
+
+<td>
+10.14
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+19
+</td>
+
+<td>
+48
+</td>
+
+<td>
+51
+</td>
+
+<td>
+217
+</td>
+
+<td>
+8.76
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+Upper middle income
+</td>
+
+<td>
+6
+</td>
+
+<td>
+48
+</td>
+
+<td>
+54
+</td>
+
+<td>
+217
+</td>
+
+<td>
+2.76
+</td>
+
+</tr>
+
+<tr>
+<td colspan="7" style="text-align: left;">
+Total Rows: 22, Total Columns: 7
 </td>
 </tr>
 </tbody>
@@ -12546,15 +14238,45 @@ Total Rows: 1, Total Columns: 1
 </section>
 <section id="task-20" class="level2">
 <h2 class="anchored" data-anchor-id="task-20">Task 20</h2>
-<div id="04b9777f" class="cell" data-execution_count="25">
+<div id="02883047" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">## SLAM DUNK TIME!  Using the resulting table CTEs from Task 19,</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co">## print table similar to the table in Task 15, with Income group in the</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co">## columns, Region in the rows and Percent of total in each cell of the table.</span></span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="st">select &quot;doh!&quot; as &quot;Homer says ...&quot; from dual</span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="701">
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="st">WITH base_counts AS (</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="st">        Region,</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="st">        `Income Group`,</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="st">        COUNT(*) AS country_count</span></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="st">    GROUP BY Region, `Income Group`</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="st">),</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a><span class="st">grand_total AS (</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a><span class="st">        COUNT(*) AS total_countries</span></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a><span class="st">    Region AS region,</span></span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a><span class="st">    ROUND(SUM(CASE WHEN `Income Group` = &#39;High income&#39; THEN (country_count * 100.0) / g.total_countries ELSE 0 END), 2) AS high_income_pct,</span></span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a><span class="st">    ROUND(SUM(CASE WHEN `Income Group` = &#39;Upper middle income&#39; THEN (country_count * 100.0) / g.total_countries ELSE 0 END), 2) AS upper_middle_income_pct,</span></span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a><span class="st">    ROUND(SUM(CASE WHEN `Income Group` = &#39;Lower middle income&#39; THEN (country_count * 100.0) / g.total_countries ELSE 0 END), 2) AS lower_middle_income_pct,</span></span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a><span class="st">    ROUND(SUM(CASE WHEN `Income Group` = &#39;Low income&#39; THEN (country_count * 100.0) / g.total_countries ELSE 0 END), 2) AS low_income_pct,</span></span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a><span class="st">    ROUND(SUM(CASE WHEN `Income Group` IS NULL OR TRIM(`Income Group`) = &#39;&#39; THEN (country_count * 100.0) / g.total_countries ELSE 0 END), 2) AS other_income_pct,</span></span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a><span class="st">    -- Row total: sum of all percentages for that region</span></span>
+<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a><span class="st">    ROUND(SUM((country_count * 100.0) / g.total_countries), 2) AS row_total_pct</span></span>
+<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a><span class="st">FROM base_counts b</span></span>
+<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a><span class="st">CROSS JOIN grand_total g</span></span>
+<span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a><span class="st">GROUP BY Region</span></span>
+<span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY region;</span></span>
+<span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-37"><a href="#cb25-37" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="51">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -12562,7 +14284,31 @@ Total Rows: 1, Total Columns: 1
 <tr>
 
 <th>
-Homer says …
+region
+</th>
+
+<th>
+high_income_pct
+</th>
+
+<th>
+upper_middle_income_pct
+</th>
+
+<th>
+lower_middle_income_pct
+</th>
+
+<th>
+low_income_pct
+</th>
+
+<th>
+other_income_pct
+</th>
+
+<th>
+row_total_pct
 </th>
 
 </tr>
@@ -12574,14 +14320,230 @@ Homer says …
 <tr>
 
 <td>
-doh!
+East Asia &amp; Pacific
+</td>
+
+<td>
+6.91
+</td>
+
+<td>
+4.15
+</td>
+
+<td>
+5.53
+</td>
+
+<td>
+0.46
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+17.05
 </td>
 
 </tr>
 
 <tr>
-<td colspan="1" style="text-align: left;">
-Total Rows: 1, Total Columns: 1
+
+<td>
+Europe &amp; Central Asia
+</td>
+
+<td>
+18.43
+</td>
+
+<td>
+6.91
+</td>
+
+<td>
+1.38
+</td>
+
+<td>
+0.00
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+26.73
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Latin America &amp; Caribbean
+</td>
+
+<td>
+8.76
+</td>
+
+<td>
+8.76
+</td>
+
+<td>
+1.84
+</td>
+
+<td>
+0.00
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+19.35
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Middle East &amp; North Africa
+</td>
+
+<td>
+3.69
+</td>
+
+<td>
+1.84
+</td>
+
+<td>
+3.23
+</td>
+
+<td>
+0.92
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+9.68
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+North America
+</td>
+
+<td>
+1.38
+</td>
+
+<td>
+0.00
+</td>
+
+<td>
+0.00
+</td>
+
+<td>
+0.00
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+1.38
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+South Asia
+</td>
+
+<td>
+0.00
+</td>
+
+<td>
+0.46
+</td>
+
+<td>
+2.76
+</td>
+
+<td>
+0.46
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+3.69
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Sub-Saharan Africa
+</td>
+
+<td>
+0.46
+</td>
+
+<td>
+2.76
+</td>
+
+<td>
+8.76
+</td>
+
+<td>
+10.14
+</td>
+
+<td>
+0.0
+</td>
+
+<td>
+22.12
+</td>
+
+</tr>
+
+<tr>
+<td colspan="7" style="text-align: left;">
+Total Rows: 7, Total Columns: 7
 </td>
 </tr>
 </tbody>
@@ -12592,7 +14554,7 @@ Total Rows: 1, Total Columns: 1
 </section>
 <section id="task-21" class="level2">
 <h2 class="anchored" data-anchor-id="task-21">Task 21</h2>
-<div id="0037e384" class="cell" data-execution_count="26">
+<div id="2a51df27" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">## ANOTHER DUNK!  Using the resulting table CTEs from Task 19,</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co">## print a table listing the number, totals and percentage of countries</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co">## by income category.</span></span>
@@ -12600,9 +14562,30 @@ Total Rows: 1, Total Columns: 1
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co">## (This is much simpler than task 20!)</span></span>
 <span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>run_sql_and_return_html(cnx,<span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="st">select &quot;doh!&quot; as &quot;Homer says ...&quot; from dual</span></span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="702">
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="st">WITH base_counts AS (</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="st">        `Income Group`,</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="st">        COUNT(*) AS country_count</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="st">    GROUP BY `Income Group`</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="st">),</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="st">grand_total AS (</span></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT </span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="st">        COUNT(*) AS total_countries</span></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM sp25_chavdarovig_user.wdi_countries</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="st">SELECT </span></span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a><span class="st">    b.`Income Group` AS income_group,</span></span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a><span class="st">    b.country_count,</span></span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a><span class="st">    g.total_countries,</span></span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a><span class="st">    ROUND((b.country_count * 100.0) / g.total_countries, 2) AS percent_of_total</span></span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a><span class="st">FROM base_counts b</span></span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a><span class="st">CROSS JOIN grand_total g</span></span>
+<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a><span class="st">ORDER BY b.country_count DESC;</span></span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="52">
 <table class="dataframe table table-sm table-striped small">
 
 <thead>
@@ -12610,7 +14593,19 @@ Total Rows: 1, Total Columns: 1
 <tr>
 
 <th>
-Homer says …
+income_group
+</th>
+
+<th>
+country_count
+</th>
+
+<th>
+total_countries
+</th>
+
+<th>
+percent_of_total
 </th>
 
 </tr>
@@ -12622,14 +14617,86 @@ Homer says …
 <tr>
 
 <td>
-doh!
+High income
+</td>
+
+<td>
+86
+</td>
+
+<td>
+217
+</td>
+
+<td>
+39.63
 </td>
 
 </tr>
 
 <tr>
-<td colspan="1" style="text-align: left;">
-Total Rows: 1, Total Columns: 1
+
+<td>
+Upper middle income
+</td>
+
+<td>
+54
+</td>
+
+<td>
+217
+</td>
+
+<td>
+24.88
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Lower middle income
+</td>
+
+<td>
+51
+</td>
+
+<td>
+217
+</td>
+
+<td>
+23.50
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Low income
+</td>
+
+<td>
+26
+</td>
+
+<td>
+217
+</td>
+
+<td>
+11.98
+</td>
+
+</tr>
+
+<tr>
+<td colspan="4" style="text-align: left;">
+Total Rows: 4, Total Columns: 4
 </td>
 </tr>
 </tbody>
@@ -12643,27 +14710,55 @@ Total Rows: 1, Total Columns: 1
 <ol type="1">
 <li>Reflect on the SQL skills you used throughout these exercises. Which skills do you feel most confident in, and which do you think need more practice? How has this assignment helped you build or reinforce specific SQL competencies?</li>
 </ol>
-<p>( response goes here)</p>
+<p>Im extremely confident with SELECT, FROM, and ORDER BY. I definitely think I have more room for improvement when it comes to joins. This assignment helped me practice using various SQL commands which gave me more experience overall with SQL and therefore helped me understand it a bit more.</p>
 <ol start="2" type="1">
 <li>Problem-Solving Approach: Describe your approach to tackling the more complex tasks (like Tasks 18, 23, and 24). How did you break down these problems, and what steps did you take when you encountered challenges? How would you approach a similar problem differently in the future?</li>
 </ol>
-<p>( response goes here)</p>
+<p>Since tasks 23 and 24 dont exist here, I’ll explain what I did with task 18: I started off by making sure I was grabbing the correct columns, then from there I took it step-by-step. For example, the DISTINCT function was crucial as I needed to make sure I didn’t have one region display the same income group more than once.</p>
 <ol start="3" type="1">
 <li>Learning Takeaways: Consider the overall learning experience from this assignment. What were the biggest takeaways about working with SQL for data analysis and transformation? How do you think these skills will apply in real-world scenarios or future coursework?</li>
 </ol>
-<p>( response goes here)</p>
+<p>The biggest takeaway from this assignment was learning to take specific data and manipulate it in a way that gives me valuable insights. These skills will help gather important information from existing data sets which may lead to important decisions.</p>
 </section>
 <section id="readme" class="level1">
 <h1>README</h1>
-<p>A quality README is an important part of EVERY project. Using the Quarto <em>include</em> command we’re including a copy of your README in the project report so that a human can evaluate it.</p>
-<p>Make sure that you edit the README so that it’s explanatory! Note that you don’t need a readme within the <em>reports</em> folder for this assignment. We’re only focused on the root <em>README.md</em>.</p>
-<p><a href="https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/">Here is some info</a> on how to write a good README!</p>
 </section>
 <section id="cmsc408-sp2025-hw8" class="level1" style="background:lightgray; margin-left:20px; border-top: 3px solid black; border-bottom: 3px solid black; padding-left:20px; padding-right:20px">
 <h1>cmsc408-sp2025-hw8</h1>
-<p>Homework 8 - World Bank Indicator Analysis</p>
-<p>(this is a scaffold. Please clean it up.)</p>
-<p>(Remember, someday you’ll look back at this repo and wonder what you were thinking! Now is your chance to remind your future self what you were thinking!)</p>
+<section id="homework-8---world-bank-indicator-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="homework-8---world-bank-indicator-analysis">Homework 8 - World Bank Indicator Analysis</h2>
+<p>Unlike previous assignments, this assignment has a pre-made database which we must gather information from using SQL. The database is of a World Bank whose goal is to reduce poverty and promote economic development. This World Bank also conducts research and analysis which will be done by us (the student).</p>
+</section>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<ol type="1">
+<li><p>First things first, you must connect to the database.</p>
+<ul>
+<li>This is done by utilizing the MySQL extenstion in VScode and connecting using the same credentials in a .env that can be found in previous assignments. The only difference is that the ‘hw#’ part must be changed to ‘hw8’.</li>
+<li>Make sure to look for a .env-sample file.</li>
+</ul></li>
+<li><p>Now clone the repo and cd your way into the reports folder.</p></li>
+<li><p>Before getting started, you must prep poetry.</p>
+<ul>
+<li>First, run the poetry install command and get everything you need from the poetry.lock file</li>
+<li>Second, run the poetry shell command to get it primed for the main event.</li>
+</ul></li>
+<li><p>Finally, Starting procedures.</p>
+<ul>
+<li><p>Quarto throws a fit when you try to preview the report.qmd file using the keybind, not sure why. It might work for you, but it didn’t for me.</p></li>
+<li><p>Run this command to prime poetry for the run: poetry run quarto render report.qmd</p></li>
+<li><p>After that, run this command to open it: quarto preview report.qmd</p></li>
+<li><p>You should be all set unless you didn’t connect to the database properly.</p></li>
+</ul></li>
+</ol>
+</section>
+<section id="additional-notes" class="level2">
+<h2 class="anchored" data-anchor-id="additional-notes">Additional notes</h2>
+<ul>
+<li><p>When testing the blocks of the report.qmd file on VScode, it gave me an error, might not for you. Regardless, when you run it with quarto it should open just fine error-free.</p></li>
+<li><p>For some reason, the Table of Contents only shows everything up to task 2. Again, not sure why, it just does.</p></li>
+</ul>
+</section>
 </section>
 </div>
 </div>
