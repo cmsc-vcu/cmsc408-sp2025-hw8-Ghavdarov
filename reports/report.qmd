@@ -369,7 +369,6 @@ SELECT
     SUM(CASE WHEN `Income Group` = 'Upper middle income' THEN 1 ELSE 0 END) AS upper_middle_income,
     SUM(CASE WHEN `Income Group` = 'Lower middle income' THEN 1 ELSE 0 END) AS lower_middle_income,
     SUM(CASE WHEN `Income Group` = 'Low income' THEN 1 ELSE 0 END) AS low_income,
-    SUM(CASE WHEN `Income Group` IS NULL OR TRIM(`Income Group`) = '' THEN 1 ELSE 0 END) AS other_income,
 
     COUNT(*) * 1.0 AS row_total
 
@@ -377,7 +376,6 @@ FROM sp25_chavdarovig_user.wdi_countries
 
 GROUP BY Region
 ORDER BY Region;
-
 
 """)
 
